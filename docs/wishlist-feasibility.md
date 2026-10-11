@@ -43,6 +43,12 @@ phases), 11 (GIFs). Item 15 phase 2 needs item 11's search capture buffer.
 
 ## 1. Hebrew layout with backspace where English has it
 
+**Done (option A).** `native_he.json` keeps the Gboard letter arrangement and moves backspace to
+the right of the bottom letter row (`x=0.85, w=0.15`), as LeanType's default `hebrew` layout does:
+the top row's eight letters are centred, and ז…ץ shrink to fit beside ⌫. LeanType also offers
+SI-1452-2 (`hebrew_1452_2`, which wmkeyboard uses); it moves ץ, ן and ת, so it wasn't adopted. The
+analysis below describes the layout before the change.
+
 **Today.** Hebrew uses its own asset, `app/src/main/assets/layouts/native_he.json`, chosen ahead of
 any arrangement by `AlphaLayouts.name()` (`native_<lang>` wins). Its backspace is the last key of the
 **top** row (`x=0.80, y=0.0, w=0.20`, line 17). English `qwerty.json` puts it at the right of the
